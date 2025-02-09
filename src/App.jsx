@@ -5,15 +5,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Profile from "./components/profile/Profile";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
-
+import React from "react";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <>
-    
-    <Register />
-    </>,
+    element: (
+      <>
+        <Register />
+      </>
+    ),
   },
   {
     path: "/login",
@@ -21,18 +22,22 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <>
-    <Navbar/>
-    <Profile />
-    </>,
+    element: (
+      <>
+        <Navbar />
+        <Profile />
+      </>
+    ),
   },
   {
-    path:'/home',
-    element:<>
-    <Navbar/>
-    <Home/>
-    </>
-  }
+    path: "/home",
+    element: (
+      <>
+        <Navbar />
+        <Home />
+      </>
+    ),
+  },
 ]);
 
 function App() {
@@ -40,7 +45,7 @@ function App() {
     <div>
       {/* <Register />
       <Login /> */}
-      
+
       <RouterProvider router={router} />
     </div>
   );
