@@ -41,6 +41,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  function helper() {
+    console.log("helper function");
+  }
   return (
     <div>
       {/* <Register />
